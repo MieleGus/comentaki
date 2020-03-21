@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import firebase from './firebase'
 
 export const useDatabasePush = endpoint => {

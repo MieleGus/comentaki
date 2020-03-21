@@ -1,5 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useDatabasePush } from './database'
+import firebase from './firebase'
 
 const NewComment = props => {
     const [, save] = useDatabasePush('comments')
@@ -17,5 +18,12 @@ const NewComment = props => {
         setComment('')
       }
     }
+
+    return (
+        <div>
+          <textarea value={comment} onChange={evt => setComment(evt.target.value)} />
+          <button onClick={createComment }>Comentar!</button>
+        </div>
+      )
 }
 export default NewComment
