@@ -1,18 +1,23 @@
-import React, {useState, useEffect} from 'react';
+import React, { useContext } from 'react';
 import './App.css';
 
 import NewComment from './NewComment'
 import Comments from './Comments'
 import CreateUser from './CreateUser'
+import UserInfo from './UserInfo'
+import SignInUser from './SignInUser'
 import { AuthProvider } from './auth'
 
 function App() {
+  
   return (
     <AuthProvider>
       <div>
         <NewComment />
         <Comments />    
         <CreateUser />    
+        <SignInUser />
+        <UserInfo />
       </div>
     </AuthProvider>
   )
